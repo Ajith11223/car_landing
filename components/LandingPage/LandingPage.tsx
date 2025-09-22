@@ -16,7 +16,7 @@ const LandingPage = () => {
     return (
         <div className='bg-white'>
             <div>
-                {/* <HeroSection /> */}
+                <HeroSection />
             </div>
             <div>
                 <ImageCarousel />
