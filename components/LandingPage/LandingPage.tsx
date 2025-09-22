@@ -19,7 +19,7 @@ const LandingPage = () => {
                 <HeroSection />
             </div>
             <div>
-                <ImageCarousel />
+                {/* <ImageCarousel /> */}
             </div>
             <div>
                 <WhyChooseUs />
