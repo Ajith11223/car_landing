@@ -1,0 +1,123 @@
+
+
+
+
+
+
+
+.fixedNavbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.underline-animation {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding-bottom: 5px;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2.5px;
+    background-color: #FFFFFF;
+    transition: width 0.3s ease;
+    /* Adjust the duration and easing as needed */
+}
+
+.underline-animation:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+.rs-picker-select.rs-picker-toggle {
+    border-radius: 8px !important;
+    /* Remove border radius */
+}
+
+.rs-picker-toggle-container {
+    border-radius: 8px !important;
+}
+
+.rs-picker-toggle-placeholder {
+    font-size: 16px;
+    line-height: 21.6px;
+    border-radius: 8px !important;
+    color: #626262 !important;
+}
+
+.rs-picker-toggle {
+    border-radius: 8px !important;
+    padding: 10px !important;
+}
+
+.rs-picker-toggle {
+    border-color: black !important;
+}
+
+.rs-picker-toggle-active {
+    border-color: black !important;
+}
+
+.rs-picker-caret-icon {
+    margin-top: 5px !important;
+}
+
+.rs-picker-popup {
+    border-radius: 8px !important;
+}
+
+.rs-input-group {
+    border-radius: 8px !important;
+}
+
+.rs-picker-toggle-value {
+    font-size: 16px;
+    line-height: 21.6px;
+    color: #626262 !important;
+    font-weight: 400 !important;
+}
+
+.rs-picker-select-menu-item {
+    font-size: 14px;
+    color: black !important;
+}
+
+.rs-picker-select-menu {
+    height: 210px !important;
+}
+
+.rs-picker-select-menu-item:hover {
+    background-color: black !important;
+    color: #FFFFFF !important;
+}
+
+.rs-picker-select-menu-item-focus {
+    background-color: black !important;
+    color: #FFFFFF !important;
+    font-weight: 400 !important;
+}
+
+.rs-stack {
+    border-color: #CECCCC !important;
+}
+
+.rs-picker-value-count {
+    font-size: 14px;
+    background-color: black !important;
+    border-radius: 8px !important;
+}

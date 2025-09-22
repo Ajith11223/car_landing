@@ -1,0 +1,16 @@
+.Features-FeatureBg-Image {
+    background-image: url(../../../public/Features-FeatureBg-Image.avif);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.Features-Bg-Image {
+    background-image: url(../../../public/Features-Bg-Image.avif);
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,7 @@
+.HeroSection-Bg-Image {
+    background-image: url(../../../public/HeroSection-Bg-Image.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}

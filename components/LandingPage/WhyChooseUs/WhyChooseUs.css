@@ -1,0 +1,43 @@
+.CardOne-Bg-Image {
+    background-image: url(../../../public/WhyChooseUs-CardOne-Bg-Image.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.CardTwo-Bg-Image {
+    background-image: url(../../../public/WhyChooseUs-CardTwo-Bg-Image.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.CardThree-Bg-ImageOne {
+    background-image: url(../../../public/WhyChooseUs-CardThree-Bg-ImageOne.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.CardThree-Bg-ImageTwo {
+    background-image: url(../../../public/WhyChooseUs-CardThree-Bg-ImageTwo.svg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.CardFour-Bg-Image {
+    background-image: url(../../../public/WhyChooseUs-CardFour-Bg-Image.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}

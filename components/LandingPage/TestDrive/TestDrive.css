@@ -1,0 +1,32 @@
+.Car-Bg-Image {
+    background-image: url(../../../public/FindCar-Car-Bg-Image.avif);
+    background-position: top left;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.Gradient-Bg-Image {
+    background-image: url(../../../public/FindCar-Gradient-Bg-Image.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.Cover-Bg-Image {
+    background-image: url(../../../public/FindCar-Cover-Bg-Image.avif);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.Yellow-Bg-Image {
+    background-image: url(../../../public/FindCar-Yellow-Bg-Image.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}

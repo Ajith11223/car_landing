@@ -1,0 +1,8 @@
+.Financing-Bg-Image {
+    background-image: url(../../../public/Financing-Bg-BoxImage.avif);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}

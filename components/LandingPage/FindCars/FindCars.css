@@ -1,0 +1,7 @@
+.FindCar-Bg-Image {
+    background-image: url(../../../public/FindCars-Bg-Image.svg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
