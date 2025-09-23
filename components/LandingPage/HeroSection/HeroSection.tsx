@@ -7,10 +7,10 @@ const HeroSection = () => {
     return (
         <div>
   {/* Background if needed */}
-  {/* <div className="absolute HeroSection-Bg-Image"></div> */}
-  <div className="absolute"></div>
+  <div className="absolute HeroSection-Bg-Image"></div>
+  {/* <div className="absolute"></div> */}
 
-  <div className="pt-[140px] md:pt-[170px] lg:pt-[190px] pb-[60px] bg-white w-full">
+  <div className="pt-[90px] md:pt-[110px] sm:pt-[10px] lg:pt-[120px] pb-[40px]  w-full">
     <div className="grid grid-cols-1 place-items-center">
       <div className="flex flex-col gap-[17px] items-center text-center">
         <p className="w-fit px-2.5 py-1 font-medium Medium-text text-[#4D4848] bg-white rounded-[30px] z-10">

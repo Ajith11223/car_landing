@@ -14,9 +14,15 @@ import Features from './Features/Features'
 
 const LandingPage = () => {
     return (
-        <div className='bg-white'>
+        <div className='bg-[#FFF8E8]'>
             <div>
                 <HeroSection />
+            </div>
+            <div>
+                <Features />
+            </div>
+            <div>
+                <Brands />
             </div>
             <div>
                 {/* <ImageCarousel /> */}
@@ -27,18 +33,14 @@ const LandingPage = () => {
             <div>
                 {/* <HowWorks /> */}
             </div>
-            <div>
-                <Features />
-            </div>
+         
             <div>
                 {/* <BuyingPower /> */}
             </div>
             {/* <div>
                 <WhyChooseUs />
             </div> */}
-            <div>
-                <Brands />
-            </div>
+          
             <div>
                 {/* <Financing /> */}
             </div>

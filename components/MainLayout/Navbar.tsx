@@ -1,88 +1,122 @@
-import React from 'react'
-import { Navbar as HeroUINavbar, NavbarContent, NavbarMenu, NavbarMenuToggle, NavbarBrand, NavbarItem, NavbarMenuItem, } from "@heroui/navbar";
-import Link from "next/link";
+"use client";
+import React from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  Link,
+  Button,
+} from "@heroui/react";
 import Image from "next/image";
 
 const navItems = [
-    { name: "Home", href: "#" },
-    { name: "About Us", href: "#" },
-    { name: "Contact Us", href: "#" },
+  { name: "Home", href: "#" },
+  { name: "About Us", href: "#" },
+  { name: "Contact Us", href: "#" },
 ];
 
-const Navbar = () => {
-    return (
-        <div className='relative'>
-            <div className='absolute'>
-                <Image src="/Header-Round-Shape.avif" alt="Blog" width={614} height={614} />
-            </div>
-            <div className='fixedNavbar mt-4 md:mt-6 lg:mt-7 mx-3 sm:mx-5 md:mx-[30px] lg:mx-[50px] xl:mx-[80px] 2xl:mx-[100px]'>
-                <HeroUINavbar maxWidth="full" position="sticky" className='bg-black rounded-[8px]'>
-                    <NavbarContent>
-                        <div className='flex w-full justify-between items-center'>
-                            <div className='flex md:gap-7 lg:gap-[45px] items-center'>
-                                <NavbarBrand as="li" className="gap-3 max-w-fit">
-                                    <Link href="/" className="cursor-pointer">
-                                        <Image src="/xtr.png" alt="Blog" width={104} height={55} />
-                                    </Link>
-                                </NavbarBrand>
-                                <NavbarItem className="hidden lg:flex">
-                                    <div className='flex md:gap-4 lg:gap-6 items-center'>
-                                        {navItems.map((item, index) => (
-                                            <Link key={index} href={item.href}>
-                                                <p className='font-bold text-[18px] leading-[24.3px] text-white underline-animation'>
-                                                    {item.name}
-                                                </p>
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </NavbarItem>
-                            </div>
-                            <NavbarItem className="hidden lg:flex"> 
-                                <div className='flex gap-[13px] items-center'>
-                                    <Link href="#" className='w-fit p-2.5 border-[1px] border-white font-normal text-[18px] leading-[21.78px] text-black hover:text-white bg-white hover:bg-black transform transition-all duration-300 rounded-[8px] text-center cursor-pointer'>
-                                        🚗 Find My Car
-                                    </Link>
-                                    {/* <Link href="#" className='w-fit p-2.5 border-[1px] border-white font-normal text-[18px] leading-[21.78px] text-white hover:text-black hover:bg-white transform transition-all duration-300 rounded-[8px] text-center cursor-pointer'>
-                                        Login
-                                    </Link> */}
-                                </div>
-                            </NavbarItem>
-                        </div>
-                    </NavbarContent>
+export default function AppNavbar() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-                    <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
-                        <NavbarMenuToggle className='text-white' />
-                    </NavbarContent>
+  return (
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      maxWidth="full"
+      className="bg-white text-black  px-4 bg-white backdrop-blur-md  shadow-md"
+      //   isBordered
+    >
+      {/* Left Section (Menu toggle + Logo) */}
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden text-black"
+        />
+        <NavbarBrand>
+          <Image
+            src="/xtrnew.jpeg"
+            alt="Logo"
+            width={94}
+            height={45}
+            priority
+            quality={100}
+            sizes="94px"
+            className="rounded-[4px] object-contain"
+          />
+        </NavbarBrand>
+      </NavbarContent>
 
-                    <NavbarMenu className='-mt-16 bg-black'>
-                        <div className='mt-24 flex flex-col gap-5 ml-2 sm:ml-3 md:ml-7'>
-                            <NavbarItem >
-                                <div className='flex flex-col gap-3'>
-                                    {navItems.map((item, index) => (
-                                        <Link key={index} href={item.href}>
-                                            <p className='font-bold text-[18px] leading-[24.3px] text-white'>
-                                                {item.name}
-                                            </p>
-                                        </Link>
-                                    ))}
-                                </div>
-                            </NavbarItem>
-                            <NavbarItem>
-                                <div className='flex flex-col gap-5'>
-                                    <Link href="#" className='w-fit p-2.5 border-[1px] border-white font-normal text-[18px] leading-[21.78px] text-black hover:text-white bg-white hover:bg-black transform transition-all duration-300 rounded-[8px] text-center cursor-pointer'>
-                                        🚗 Find My Car
-                                    </Link>
-                                    <Link href="#" className='w-[148px] p-2.5 border-[1px] border-white font-normal text-[18px] leading-[21.78px] text-white hover:text-black hover:bg-white transform transition-all duration-300 rounded-[8px] text-center cursor-pointer'>
-                                        Login
-                                    </Link>
-                                </div>
-                            </NavbarItem>
-                        </div>
-                    </NavbarMenu>
-                </HeroUINavbar>
-            </div>
-        </div>
-    )
+      {/* Center Section (Nav Items for Desktop) */}
+      <NavbarContent className="hidden sm:flex gap-6" justify="center">
+    {navItems.map((item, index) => (
+      <NavbarItem key={index}>
+        <Link
+          href={item.href}
+          className="text-black-600 font-semibold hover:text-green-700 transition-colors duration-300"
+        >
+          {item.name}
+        </Link>
+      </NavbarItem>
+    ))}
+  </NavbarContent>
+
+
+      {/* Right Section (Buttons) */}
+      <NavbarContent justify="end">
+        {/* <NavbarItem className="hidden lg:flex">
+          <Link
+            href="#"
+            className="w-fit px-4 py-2 border border-black text-[16px] text-black hover:bg-white hover:text-black rounded-md transition-all duration-300"
+          >
+            Login
+          </Link>
+        </NavbarItem> */}
+        <NavbarItem className="hidden sm:flex">
+          <Button
+            as={Link}
+            href="#"
+            variant="flat"
+            className="bg-black text-white hover:bg-white hover:text-black rounded-md hover:border-black"
+          >
+            🚗 Find My Car
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+
+      {/* Mobile Menu */}
+      <NavbarMenu className="bg-black">
+        {navItems.map((item, index) => (
+          <NavbarMenuItem key={`${item.name}-${index}`}>
+            <Link
+              href={item.href}
+              className="w-full text-white font-bold text-lg"
+            >
+              {item.name}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+
+        <NavbarMenuItem>
+          <Link
+            href="#"
+            className="w-full px-4 py-2 border border-white bg-white text-black hover:bg-black hover:text-white rounded-md text-center block"
+          >
+            🚗 Find My Car
+          </Link>
+        </NavbarMenuItem>
+
+        <NavbarMenuItem>
+          <Link
+            href="#"
+            className="w-full px-4 py-2 border border-white text-white hover:bg-white hover:text-black rounded-md text-center block"
+          >
+            Login
+          </Link>
+        </NavbarMenuItem>
+      </NavbarMenu>
+    </Navbar>
+  );
 }
-
-export default Navbar

@@ -6,9 +6,12 @@ import Image from "next/image";
 const WhyChooseUs = () => {
     return (
         <div>
-            <div className='py-10 md:py-12 lg:py-[60px] xl:py-[70px] px-3 sm:px-5 md:px-[30px] lg:px-[50px] xl:px-[80px] 2xl:px-[100px] bg-[#000000]'>
+                  <div className='absolute Features-Bg-Image'></div>
+                  <div className="absolute HeroSection-Bg-Image"></div>
+
+            <div className='py-10 md:py-12 lg:py-[60px] xl:py-[70px] px-3 sm:px-5 md:px-[30px] lg:px-[50px] xl:px-[80px] 2xl:px-[100px] border'>
                 <div className='flex flex-col gap-[34px]'>
-                    <h3 className='font-bold text-[30px] md:text-[48px] leading-[40px] md:leading-[58px] text-white text-center'>
+                    <h3 className='font-bold text-[30px] md:text-[48px] leading-[40px] md:leading-[58px] text-black text-center'>
                         Why Chose Us
                     </h3>
                     <div className=''>

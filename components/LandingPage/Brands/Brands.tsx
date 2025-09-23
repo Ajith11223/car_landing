@@ -54,7 +54,11 @@ const Brands = () => {
     ];
 
     return (
-        <div className='py-10 md:py-12 lg:py-[60px] xl:py-[70px] px-3 sm:px-5 md:px-[30px] lg:px-[50px] xl:px-[80px] 2xl:px-[100px] bg-white'>
+        <>
+              <div className='absolute Features-Bg-Image'></div>
+              <div className="absolute HeroSection-Bg-Image"></div>
+        <div className='py-10 md:py-12 lg:py-[60px] xl:py-[70px] px-3 sm:px-5 md:px-[30px] lg:px-[50px] xl:px-[80px] 2xl:px-[100px] '>
+            
             <div className='flex flex-col gap-7 md:gap-8 lg:gap-[38px]'>
                 <div className='flex flex-col lg:flex-row gap-7 lg:gap-4 lg:w-full lg:items-center lg:justify-between'>
                     <h3 className='max-w-[270px] md:max-w-[360px] lg:max-w-[430px] font-bold text-[30px] md:text-[40px] xl:text-[48px] leading-[38.8px] md:leading-[48.8px] xl:leading-[60.8px] text-black'>
@@ -173,6 +177,7 @@ const Brands = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
